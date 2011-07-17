@@ -26,6 +26,8 @@ class uhrfnc extends CI_Controller {
 	function index(){
         redirect('uhrfnc/dashboard');
 	}
+
+    function test(){}
 	
 	function getpendingleave(){
         $sql = "SELECT * FROM leave_type";
