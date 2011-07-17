@@ -23,6 +23,8 @@ class uhrfnc extends CI_Controller {
         $this->table->set_template($tmpl); 
 	}
 
+    function ikawka(){}
+
 	function index(){
         redirect('uhrfnc/dashboard');
 	}
