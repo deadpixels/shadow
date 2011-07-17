@@ -31,6 +31,10 @@ class uhrfnc extends CI_Controller {
         //this is my sample
     }
 
+    function more(){
+        //this is me
+    }
+
 	function index(){
         redirect('uhrfnc/dashboard');
 	}
