@@ -1,0 +1,35 @@
+<h3> Failure to Time-In and Time-Out Form</h3>
+<div>
+  <form id="form1" name="form1" method="post" action="">
+    <table width="274" border="0">
+      <tr>
+        <td width="120"><div align="right">Failure Type:</div></td>
+        <td width="144"><select name="failuretype" id="select">
+          <option value="0"> Failure Time In</option>
+          <option value="1"> Failure Time Out</option>
+        </select></td>
+      </tr>
+      <tr>
+        <td><div align="right">Failure Date:</div></td>
+        <td><input type="text" name="failuredate" id="failuredate" readonly="true" /></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>{error}</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" name="button" id="button" value="Submit" />
+        <input type="hidden" name="newfailure" value="true" /></td>
+      </tr>
+    </table>
+  </form>
+</div>
+<script>
+
+$(function(){
+	
+	$('#failuredate').datepicker();
+	
+});
+</script>

@@ -1,0 +1,17 @@
+<div>
+	<div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">Edit Group</div>
+	{errors}
+	<form name="basic" action="employee/editgroup/{groupingid}" method="post" enctype="multipart/form-data">
+	<div class="fieldcontainer">
+		<div class="fl namefield">Group Name</div>
+		<div class="field">: <input type="text" name="groupname" value={name} /></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Group Head</div>
+		<div class="field">: {grouphead}</div>
+	</div>
+	<div><input type="submit" value="Update"></div>
+	<input type="hidden" name="editgroup" value="true">
+	</form>
+</div>
+<div>&nbsp;</div>

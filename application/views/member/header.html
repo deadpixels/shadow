@@ -1,0 +1,74 @@
+<html>
+    <head> 
+        <title>{title}</title>
+        <base href="{base_url}" />
+        <link href="image/favicon.ico" rel="shortcut icon"/>
+        <link href="css/member.css" rel="stylesheet" type="text/css" />
+        <!--[if IE]>
+            <link href="css/mieonly.css" rel="stylesheet" type="text/css" />
+        <![endif]-->
+        <link href="css/redmond/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css" />
+        
+        {style}
+        <script type="text/javascript" src="script/common.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"></script>
+        {script}
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+                $(".dropdown dt a").click(function() {
+                    $(".dropdown dd ul").toggle();
+                });
+                            
+                $(".dropdown dd ul li a").click(function() {
+                    var text = $(this).html();
+                    $(".dropdown dt a span").html(text);
+                    $(".dropdown dd ul").hide();
+                    //$("#result").html("Selected value is: " + getSelectedValue("sample"));
+                });
+                            
+                function getSelectedValue(id) {
+                    return $("#" + id).find("dt a span.value").html();
+                }
+
+                $(document).bind('click', function(e) {
+                    var $clicked = $(e.target);
+                    if (! $clicked.parents().hasClass("dropdown"))
+                        $(".dropdown dd ul").hide();
+                });
+
+            });
+        </script>        
+    </head>
+    <body>
+        <div class="body_wrapper">
+            <div class="mainheader">
+                <div class="menu_wrapper">                    
+                    <div class="fr">
+                        <div class="fl account_panel">
+                        <ul>
+                            <li><img src="image/message_button.png"/></li>
+                            <li>Amiel Simbahon</li>
+                            <li><a href="account/logout">Logout</a></li>
+                            <li class="last"><a href="help" class="help">Help</a></li>
+                        </ul>
+                        </div>
+                        <img src="image/logo_blue.png" />
+                    </div>
+                    <div class="menu_holder">{user_menu}</div>                    
+                </div>
+            </div>
+            <div style="height: 64px">
+                <dl id="sample" class="dropdown">
+                    <dt><a href="javascript:;"><span>{current_company}</span></a></dt>
+                    <dd>
+                        <ul>{company_list}
+                            <li><a href="account/setcompany/{companyid}">{shortname}</a></li>{/company_list}                                                        
+                            <li>&nbsp;</li>
+                            <li><a href="member/newcompany">New Company</a></li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div style="height: 28px;">{sub_menu}</div>

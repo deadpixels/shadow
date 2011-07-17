@@ -1,0 +1,96 @@
+<div style="padding: 10px">
+    <div class="fr" style="width: 460px"> 
+        <div class="dashbox">
+            <div class="header">
+                <div class="fr">&nbsp;</div>
+                <div>Birthdays</div>
+            </div>
+            <div class="wrapper">
+                <div class="items" style="padding: 0px">
+                    <div class="name" style="padding: 0px">                        
+                        <div>Today</div>
+                    </div>
+                </div>
+                <div style="padding-top: 4px">
+                    {today}
+                    <div class="info" style="line-height: 23px">
+                        <div class="fr">
+                            {birthdate}    
+                        </div>
+                        <div>{firstname} {lastname}</div>
+                    </div>
+                    {/today}
+                </div>
+                <div class="items" style="padding: 0px">
+                    <div class="name" style="padding: 0px">                        
+                        <div>This Month</div>
+                    </div>
+                </div>
+                <div style="padding-top: 4px">
+                    {thismonth}
+                    <div class="info" style="line-height: 23px">
+                        <div class="fr">
+                            {birthdate}    
+                        </div>
+                        <div>{firstname} {lastname}</div>
+                    </div>
+                    {/thismonth}
+                </div>
+                <div class="items" style="padding: 0px">
+                    <div class="name" style="padding: 0px">                        
+                        <div>Anniversary</div>
+                    </div>
+                </div>
+                <div style="padding-top: 4px">
+            	{anniversary}
+            	    <div class="info" style="line-height: 23px">
+                        <div class="fr">
+                            {date_hired}    
+                        </div>
+                        <div>{firstname} {lastname}</div>
+                    </div>
+                {/anniversary}
+                </div>
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="dashbox">
+            <div class="header">
+                <div class="fr">&nbsp;</div>
+                <div>Event Calendar</div>
+            </div>
+            <div class="wrapper" id="event_calendar">
+                {event_calendar}
+            </div>
+        </div>
+        <div>&nbsp;</div>
+    </div>
+    <div class="fl" style="width: 460px">
+        <div class="dashbox_alt">
+            <div class="header">
+                <div class="fr"><img src="image/btn_manage.png"></div>
+                <div>Current Payroll</div>
+            </div>
+            <div class="wrapper">
+                {payroll_list}
+                <div class="items">
+                    <div class="name">
+                        <div class="fr">{type}</div>
+                        <div>{name}</div>
+                    </div>
+                    <div class="info">
+                        <div class="fr">
+                            <a href="{link_approve}"><img src="image/btn_approve.png" /></a> 
+                            <a href="{link_view}"><img src="image/btn_view.png" /></a>
+                        </div>
+                        <div>{detail}</div>
+                    </div>
+                </div>
+                {/payroll_list}
+            </div>
+            <div align="right" style="margin-top: 6px;"><a href="payroll/">View All</a></div>
+        </div>
+        <div>&nbsp;</div>
+    </div>
+    <div class="clr"></div>
+</div>

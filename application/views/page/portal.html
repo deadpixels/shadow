@@ -1,0 +1,90 @@
+<style>
+.signform input[type="text"], .signform input[type="password"]{
+    width: 220px
+}
+.ui-state-error{
+    padding: 0.6em;
+}
+</style>
+<div style="height: 303px">
+    <div class="fl" style="padding-top: 15px; padding-left: 50px;">
+        <img src="image/sample_view2.png" />
+    </div>
+    <div style="padding-left: 586px;padding-top:88px">
+        <div class="title" style="color: #FFF">Easy access to your Portal</div>
+        <div style="line-height: 24px;font-size: 16px; color:#FFF; padding-top: 14px">As employee, your record and cotribution on track. Access anywhere all the time.</div>
+    </div>
+</div>
+<div style="padding: 10px 0px">
+    <div>
+        <div class="fl" style="width:250px; padding-right:20px">
+                <div class="subtitle">Employee's Portal</div>
+                <div class="col_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque elementum, nisi eget venenatis accumsan, velit lectus pellentesque nulla, ut volutpat arcu massa vitae urna. Duis porttitor consectetur mauris non aliquet. Praesent felis dolor, imperdiet sit amet facilisis in, cursus in elit. Fusce augue erat, tempor volutpat facilisis ut, malesuada dignissim velit.</div>
+        </div>
+        <div class="fl" style="width:449px; padding-right:20px">
+            <div><img src="image/grey_top.png"></div>
+            <div style="padding: 0 6px; background: #eee">
+            <div class="subtitle" style="padding-bottom: 8px">Sign-up for an Account</div>
+            {errors}
+            <form class="signform" method="POST" action="">
+                <div class="fieldcontainer">
+	                <div class="fl namefieldm">Employee Reference Code</div>
+	                <div class="field">: <input type="text" name="erefcode" /> <a href="javascript:;" title="What's this?" onclick="modalbox('help/showrefcode',{title: 'Reference Codes', buttons: [{
+        text: 'Ok',
+        click: function() { $(this).dialog('close'); }
+    }], resizable: false, width: 350, height: 200});"><img src="image/help.png" /></a></div>
+                </div>
+                <div class="fieldcontainer">
+	                <div class="fl namefieldm">Company Reference Code</div>
+	                <div class="field">: <input type="text" name="crefcode" /> <a href="javascript:;" title="What's this?" onclick="modalbox('help/showrefcode',{title: 'Reference Codes', buttons: [{
+        text: 'Ok',
+        click: function() { $(this).dialog('close'); }
+    }], resizable: false, width: 350, height: 200});"><img src="image/help.png" /></a></div>
+                </div>
+                <div class="fieldcontainer">
+	                <div class="fl namefieldm">Username</div>
+	                <div class="field">: <input type="text" name="username" /></div>
+                </div>
+                <div class="fieldcontainer">
+	                <div class="fl namefieldm">Password</div>
+	                <div class="field">: <input type="password" name="password" /></div>
+                </div>
+                <div class="fieldcontainer">
+	                <div class="fl namefieldm">Retype Password</div>
+	                <div class="field">: <input type="password" name="rpassword" /></div>
+                </div>
+                <div class="fieldcontainer">
+                    <div class="fl namefieldm">&nbsp;</div>
+	                <div class="field" align="right">Clear&nbsp;&nbsp;|&nbsp;&nbsp;<input type="submit" name="submit" value="Sign-Up">&nbsp;&nbsp;</div>		            
+                </div>
+                <input type="hidden" name="register" value="true" />
+            </form>
+            </div>
+            <div><img src="image/grey_bottom.png"></div>
+        </div>
+        <div class="fl" style="width: 220px">
+            <div class="login_top">
+                <div class="login_bottom">
+                    <div class="form_holder">
+                        <div class="logintitle">Login to Portal</div>
+                        <div class="form_content">
+                            <form method="POST" action="">
+                                <div style="line-height: 28px">Username</div>
+                                <div><input class="{form_error}" type="text" name="username" style="width: 100%" /></div>
+                                <div style="line-height: 28px">Password</div>
+                                <div><input class="{form_error}" type="password" name="password" style="width: 100%" /></div>
+                                <div style="padding-top: 8px;">
+                                    <div class="fl" style="line-height: 30px">Forgot Password?</div>
+                                    <div class="fr"><input type="submit" value="Login" name="login" class="login_button"></div>
+                                    <div class="clr"></div>
+                                </div>
+                                <input type="hidden" name="login" value="true">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clr"></div>
+    </div>
+</div>

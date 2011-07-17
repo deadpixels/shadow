@@ -1,0 +1,53 @@
+<h3> Overtime or Undertime Form</h3>
+<div>
+  <form id="form1" name="form1" method="post" action="">
+    <table width="590" border="0">
+      <tr>
+        <td width="95"><div align="right">Choose:</div></td>
+        <td width="164"><select name="choosetype" id="select">
+          <option value="0"> Overtime</option>
+          <option value="1"> Undertime</option>
+        </select></td>
+        <td width="121">&nbsp;</td>
+        <td width="192">&nbsp;</td>
+      </tr>
+      <tr>
+        <td><div align="right">Start Date:</div></td>
+        <td><input type="text" name="startdate" id="startdate" readonly="readonly" /></td>
+        <td><div align="right">Start Time:</div></td>
+        <td><input type="text" name="starttime" id="starttime" /></td>
+      </tr>
+      <tr>
+        <td><div align="right">End Date:</div></td>
+        <td><input type="text" name="enddate" id="enddate" readonly="readonly" /></td>
+        <td><div align="right">End Time:</div></td>
+        <td><input type="text" name="endtime" id="endtime"  /></td>
+      </tr>
+      <tr>
+        <td><div align="right">Description:</div></td>
+        <td colspan="3"><textarea name="description" id="textarea" cols="25" rows="5"></textarea></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>{error}</td>
+        <td></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" name="button" id="button" value="Submit" />
+        <input type="hidden" name="trap" value="true" /></td>
+        <td>&nbsp;</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table>
+</form></div>
+<script>
+
+$(function(){
+	
+	$('#startdate').datepicker();
+	$('#enddate').datepicker();
+	
+});
+</script>

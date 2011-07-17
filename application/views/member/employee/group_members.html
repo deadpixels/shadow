@@ -1,0 +1,21 @@
+<div>
+	<div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">Ggroup Members</div>
+	{error}
+	<div>
+		<div class="fl namefield">Group Name</div>
+		<div class="field">: {groupname}</div>
+	</div>
+	<div style="padding-bottom: 4px;padding-top: 4px">{members}</div>
+	<div style="border: 1px solid #999; padding: 4px">
+	<form name="basic" action="employee/groupmembers/{groupingid}" method="post" enctype="multipart/form-data">
+    <div class="fr"><input type="submit" value="Add to Group"></div>
+	<div>
+		<div class="fl namefield">Employee Name</div>
+		<div class="field">: {employees}</div>
+	</div>
+	
+	<input type="hidden" name="addmember" value="true">
+	</form>
+	</div>
+</div>
+<div>&nbsp;</div>

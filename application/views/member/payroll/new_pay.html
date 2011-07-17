@@ -1,0 +1,48 @@
+<div>
+    <div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+        <div class="fr">
+	        <a href="payroll/" title="Back to List"><img src="image/exit.png"></a>&nbsp;
+	    </div>
+        <div class="fl">
+           <div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">New Payroll</div>
+	    </div>	    	    
+    </div>
+	<div>{errors}</div>
+	<form name="basic" action="payroll/newpayroll" method="post" enctype="multipart/form-data">
+	<div class="fieldcontainer">
+		<div class="fl namefield">Period From</div>
+		<div class="field">: <input style="text-align: center; font-size: 12pt; background: #FFFFFF url('image/date.png') no-repeat 1px 2px;" type="text" readonly AUTOCOMPLETE="off" name="payfrom" id="payfrom" /></div>
+	</div>
+	<div class="fieldcontainer ui-priority-secondary">
+		<div class="fl namefield">Period To</div>
+		<div class="field">: <input style="text-align: center; font-size: 12pt; background: #FFFFFF url('image/date.png') no-repeat 1px 2px;" type="text" readonly AUTOCOMPLETE="off" name="payto" id="payto" /></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Remarks</div>
+		<div class="field">: <textarea name="remark"></textarea></div>
+	</div>
+	<div class="buttonpanel">
+	    <input type="submit" value="" class="submitbutton" align="absmiddle"/> <a href="payroll/" title="Back to List" align="absmiddle"><img src="image/exit.png" align="top" /></a>
+    </div>
+	<input type="hidden" name="newpay" value="true">
+	</form>
+</div>
+<div>&nbsp;</div>
+<script>
+	$(function() {
+		var dates = $( "#payfrom, #payto" ).datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			numberOfMonths: 2,
+			onSelect: function( selectedDate ) {
+				var option = this.id == "payfrom" ? "minDate" : "maxDate",
+					instance = $( this ).data( "datepicker" ),
+					date = $.datepicker.parseDate(
+						instance.settings.dateFormat ||
+						$.datepicker._defaults.dateFormat,
+						selectedDate, instance.settings );
+				dates.not( this ).datepicker( "option", option, date );
+			}
+		});
+	});
+	</script>

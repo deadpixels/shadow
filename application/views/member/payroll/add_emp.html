@@ -1,0 +1,27 @@
+<div>
+	<div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+        <div class="fr">
+	        <a href="payroll/edit/{payrollid}" title="Back to List"><img src="image/exit.png"></a>&nbsp;
+	    </div>
+        <div class="fl">
+           <a href="payroll/edit/{payrollid}"><img src="image/btn_paycalc.png"></a>
+	    </div>	    	    
+    </div>	
+	<div style="padding-top:6px;padding-bottom:4px;font-weight:bold;font-family:Trebuchet MS;font-size:16pt">Pay Period: {datefrom} - {dateto}</div>
+	<form name="basic" action="payroll/addemp/{payrollid}" method="post" enctype="multipart/form-data">
+	<div style="padding-bottom:6px">
+		<div class="fl namefield">Employee</div>
+		<div class="field">: {employees}</div>
+	</div>
+	<div style="padding-bottom:6px">
+		<div class="fl namefield">Schedule</div>
+		<div class="field">: <span id="schedule">Please select an employee.</span></div>
+	</div>
+	<div class="buttonpanel">
+	    <input type="submit" value="" class="submitbutton" align="absmiddle" /> <a href="payroll/edit/{payrollid}" title="Back to List" align="absmiddle"><img src="image/exit.png" align="top"></a>
+	</div>
+	<input type="hidden" name="addemp" value="true">
+	</form>
+</div>
+<div>&nbsp;</div>
+

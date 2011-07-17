@@ -1,0 +1,42 @@
+<div>
+    <div style="font-weight: bold;font-size:14px;padding: 8px">Emailing Payslips</div>
+    <div id="progressbar"></div>
+    <div align="center" style="padding: 4px"><input name="Start" type="button" value="Start" id="start_send" /></div>
+</div>
+<script>
+	$(function() {
+		$( "#progressbar" ).progressbar({
+			value: 0
+		});
+        var maxval = {maxval};
+        var curval = 0;
+		function sendpayslip(data){
+            $.get('payroll/ajaxsender/{payrollid}/'+data[0], function(d){
+                if(d!=1){
+                    //error here
+                } 
+                data.splice(0,1);
+                if(data.length != 0){
+                    curval += 1;
+                    $( "#progressbar" ).progressbar({
+			            value: Math.round((curval/maxval)*100)
+		            });
+                    sendpayslip(data);
+                }else{
+                    $( "#progressbar" ).progressbar({
+			            value: 100
+		            });
+		            $('.ui-dialog-titlebar-close').css("display", "");
+		            $("#start_send").val("Done");
+                }
+            });
+		}
+
+		$('#start_send').bind("click", function(){
+		    $(this).val("Sending...");
+            $(this).attr('disabled', true);
+            $('.ui-dialog-titlebar-close').css("display", 'none');
+            sendpayslip({paydata});
+		});
+	});
+</script>

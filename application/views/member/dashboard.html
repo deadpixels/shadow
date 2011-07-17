@@ -1,0 +1,106 @@
+<div style="padding: 10px">
+    <div class="fr" style="width: 460px"> 
+    <!-- RIGHT SIDE -->
+        <div class="dashbox_alt">
+            <div class="header"><a href="payroll/newpayroll"><img src="image/btn_addpayroll.png"></a></div>
+            <div class="wrapper">
+                {payroll_list}
+                <div class="items">
+                    <div class="name">
+                        <div class="fr">{type}</div>
+                        <div>{name}</div>
+                    </div>
+                    <div class="info">
+                        <div class="fr">
+                            <a href="{link_approve}"><img src="image/btn_approve.png" /></a> 
+                            <a href="{link_view}"><img src="image/btn_view.png" /></a>
+                        </div>
+                        <div>{detail}</div>
+                    </div>
+                </div>
+                {/payroll_list}
+            </div>
+            <div align="right" style="margin-top: 6px;"><a href="payroll/">View All</a></div>
+        </div>
+        <div>&nbsp;</div>
+        <div>{chart}</div>
+    </div>
+    <div class="fl" style="width: 460px">
+    <!-- LEFT SIDE -->
+        <div class="dashbox">
+            <div class="header">
+                <div class="fr"><img src="image/btn_manage.png"></div>
+                <div>Leave Requests</div>
+            </div>
+            <div class="wrapper">
+                {leave_list}
+                <div class="items">
+                    <div class="name">
+                        <div class="fr">{type}</div>
+                        <div>{name}</div>
+                    </div>
+                    <div class="info">
+                        <div class="fr">
+                            <a href="{link_approve}"><img src="image/btn_approve.png" /></a> 
+                            <a href="{link_decline}"><img src="image/btn_decline.png" /></a> 
+                            <a href="{link_view}"><img src="image/btn_view.png" /></a>
+                        </div>
+                        <div>{detail}</div>
+                    </div>
+                </div>
+                {/leave_list}
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="dashbox">
+            <div class="header">
+                <div class="fr"><img src="image/btn_manage.png"></div>
+                <div>Over/Under Time Requests</div>
+            </div>
+            <div class="wrapper">
+                {ot_list}
+                <div class="items">
+                    <div class="name">
+                        <div class="fr">{type}</div>
+                        <div>{name}</div>
+                    </div>
+                    <div class="info">
+                        <div class="fr">
+                            <a href="{link_approve}"><img src="image/btn_approve.png" /></a> 
+                            <a href="{link_decline}"><img src="image/btn_decline.png" /></a> 
+                            <a href="{link_view}"><img src="image/btn_view.png" /></a>
+                        </div>
+                        <div>{detail}</div>
+                    </div>
+                </div>
+                {/ot_list}
+            </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="dashbox">
+            <div class="header">
+                <div class="fr"><img src="image/btn_manage.png"></div>
+                <div>Schedule Requests</div>
+            </div>
+            <div class="wrapper">
+                {sched_list}
+                <div class="items">
+                    <div class="name">
+                        <div class="fr">{type}</div>
+                        <div>{name}</div>
+                    </div>
+                    <div class="info">
+                        <div class="fr">
+                            <a href="{link_approve}"><img src="image/btn_approve.png" /></a> 
+                            <a href="{link_decline}"><img src="image/btn_decline.png" /></a> 
+                            <a href="{link_view}"><img src="image/btn_view.png" /></a>
+                        </div>
+                        <div>{detail}</div>
+                    </div>
+                </div>
+                {/sched_list}
+            </div>
+        </div>
+    </div>
+    <div class="clr"></div>
+</div>

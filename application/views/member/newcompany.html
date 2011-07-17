@@ -1,0 +1,58 @@
+<style>
+form input[type="text"], form select{
+    width: 250px;
+}
+</style>
+<div>
+    <div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+        <div class="fr">
+	        <a href="member/" title="Back to List"><img src="image/exit.png"></a>&nbsp;
+	    </div>
+        <div class="fl">
+           <div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">Create New Company</div>
+	    </div>	    	    
+    </div>
+    <div><form method="POST" enctype="multipart/form-data">
+        <div>{errors}</div>
+	    <div class="fieldcontainer">
+		    <div class="fl namefield">Company Name</div>
+		    <div class="field">: <input type="text" name="name" /></div>
+	    </div>
+	    <div class="fieldcontainer ui-priority-secondary">
+		    <div class="fl namefield">Short Name</div>
+		    <div class="field">: <input type="text" name="shortname" /></div>
+	    </div>
+	    <div class="fieldcontainer">
+		    <div class="fl namefield">Industry</div>
+		    <div class="field">: {industry}</div>
+	    </div>
+	    <div class="fieldcontainer ui-priority-secondary">
+		    <div class="fl namefield">Address</div>
+		    <div class="field">: <input type="text" name="address" /></div>
+	    </div>
+	    <div class="fieldcontainer">
+		    <div class="fl namefield">Phone Number</div>
+		    <div class="field">: <input type="text" name="phone" /></div>
+	    </div>
+	    <div class="fieldcontainer ui-priority-secondary">
+		    <div class="fl namefield">Email</div>
+		    <div class="field">: <input type="text" name="email" /></div>
+	    </div>
+	    <div class="fieldcontainer">
+		    <div class="fl namefield">Website</div>
+		    <div class="field">: <input type="text" name="website" /></div>
+	    </div>
+	    <div class="fieldcontainer ui-priority-secondary">
+		    <div class="fl namefield">Company Size</div>
+		    <div class="field">: {company_size}</div>
+	    </div>
+	    <div class="fieldcontainer">
+		    <div class="fl namefield">Set as Default</div>
+		    <div class="field">: <input type="checkbox" name="default" value="1" /> <em>(Check to set as default company)</em></div>
+	    </div>
+	    <div class="buttonpanel">
+	        <input type="submit" value="" class="submitbutton" align="absmiddle" /></a>
+	    </div>
+	    <input type="hidden" name="newcompany" value="true" />
+    </form></div>
+</div>

@@ -1,0 +1,27 @@
+<div>
+	<div style="font-size:18px;font-weight:bold;font-family:Trebuchet MS;padding-bottom:4px;border-bottom:2px solid #000">{merit_title}</div>
+	<div style="padding-bottom:6px;padding-top:5px">{current_merit}</div>
+	<div style="font-size:18px;font-weight:bold;font-family:Trebuchet MS;border-bottom:2px solid #000">New Merit</div>
+	<div style="padding-top:5px">
+		<div>{errors}</div>
+		<form id="merits" name="merits" action="" onsubmit="$.post('employee/merit/{type}/{empid}', $('#merits').serialize(), function(d){
+            $('#modalbox_content').html(d);
+		}); return false;" method="post" enctype="multipart/form-data">
+			<div class="fieldcontainer">
+				<div class="fl namefield">Additional Amount</div>
+				<div class="field">: <input type="text" name="value"></div>
+			</div>
+			<div class="fieldcontainer">
+				<div class="fl namefield">Start Date</div>
+				<div class="field">: <input type="text" AUTOCOMPLETE="off" readonly name="entrydate" id="entrydate"></div>
+			</div>
+			<div align="center" style="padding-top:6px"><input type="submit" value="Save"> | <a href="javascript:;" onclick="closeModalbox();">Cancel</a></div>
+			<input type="hidden" name="merits" value="true">
+		</form>
+	</div>
+</div>
+<script>
+$(function(){
+    $('#entrydate').datepicker();
+});
+</script>

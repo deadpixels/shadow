@@ -1,0 +1,18 @@
+<div>&nbsp;</div>
+<div>
+	<div>{errors}</div>
+	<form name="mailer" action="setting/mailer" method="post" enctype="multipart/form-data">
+	<div class="fieldcontainer">
+		<div class="fl namefield">Email</div>
+		<div class="field">: <input type="text" name="email" value="{email}"></div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Password</div>
+		<div class="field">: <input type="password" name="pass" value="{pass}"></div>
+	</div>
+	<div class="fieldcontainer"><input type="submit" value="Save"></div>
+	<input type="hidden" name="mailer" value="true">
+	<input type="hidden" name="emailerid" value="{emailerid}">
+	</form>
+</div>
+<div>&nbsp;</div>

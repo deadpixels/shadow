@@ -1,0 +1,26 @@
+<div>
+    <div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+        <div class="fr" style="width: 240px">
+	        <div class="fieldcontainer">
+		        <div class="fl namefieldm">Download Template</div>
+		        <div class="fieldm">: <a href="file/employee.csv"><img align="absmiddle" src="image/btn_download.png" title="Download Template"></a></div>
+	        </div>
+	    </div>
+        <div class="fl">
+           <div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">Import Employee Data</div>
+	    </div>	    	    
+    </div>	
+	<div style="padding-top: 8px;">
+	<form name="import" action="employees/importemp" method="post" enctype="multipart/form-data">
+	<div class="fieldcontainer" style="padding-top:4px">
+		<div class="fl namefield">CSV File</div>
+		<div class="field">: <input type="file" name="importemp" ></div>
+	</div>
+	<div class="buttonpanel">
+	    <input type="submit" value="" class="importbutton">
+	</div>
+	<input type="hidden" name="importdata" value="true">
+	</form>
+	</div>
+</div>
+<div>&nbsp;</div>

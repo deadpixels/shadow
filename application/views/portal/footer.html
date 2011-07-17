@@ -1,0 +1,38 @@
+            <div class="footer_content">
+                <div class="fl" align="left">{bottom_menu}</div>
+                <div class="fr">Copyright &copy; 2011 - my1530.net Portal - All rights reserved</div>
+                <div class="clr"></div>
+            </div>
+        </div>
+        <div id="modalbox">
+            <div id="modalbox_content"></div>
+        </div>
+        <script>
+            $(function() {
+		        $( "#modalbox" ).dialog( "destroy" );
+		        $( "#modalbox" ).dialog({
+			        modal: true,
+			        autoOpen: false
+		        });
+		        $( "#birthdate" ).datepicker({
+			        changeMonth: true,
+			        changeYear: true
+		        });
+		        $( "#birthdate" ).datepicker( "option", "showAnim", "slideDown");
+	        });
+
+	        function modalbox(url, option){
+	            $( "#modalbox" ).dialog(option);
+	            $.get(url, function(data){
+	                $("#modalbox_content").html(data);
+	                $( "#modalbox" ).dialog( "open" );
+	            }, "text");        
+	        }
+
+	        function closeModalbox(){
+                $( "#modalbox" ).dialog( "close" );
+                $("#modalbox_content").html("");
+	        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<div>
+	<div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+        <div class="fr">
+	        <a href="employee/" title="Back to List"><img src="image/exit.png"></a>&nbsp;
+	    </div>
+        <div class="fl">
+           <div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">Basic Details of: {name}</div>
+	    </div>	    	    
+    </div>
+	<div>{errors}</div>
+	<form name="basic" action="employee/basic/{empid}" method="post" enctype="multipart/form-data">
+	<div class="fieldcontainer">
+		<div class="fl namefield">Basic</div>
+		<div class="field">: {b_merit} {basic}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Allowance</div>
+		<div class="field">: {a_merit} {allowance}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">SSS</div>
+		<div class="field">: {sss_merit} {sss}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Pag-ibig</div>
+		<div class="field">: {pagibig_merit} {pagibig}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Philhealth</div>
+		<div class="field">: {philhealth_merit} {philhealth}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Max Work Hrs</div>
+		<div class="field">: {maxhour_merit} {maxhours}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Max Break Hrs</div>
+		<div class="field">: {maxbreak_merit} {maxbreakhours}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Max Work Days</div>
+		<div class="field">: {maxworkdays_merit} {maxworkdays}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Night Dif In</div>
+		<div class="field">: {nightdiffin_merit} {nightdiffin}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Night Dif Out</div>
+		<div class="field">: {nightdiffout_merit} {nightdiffout}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Half Day</div>
+		<div class="field">: {halfday_merit} {halfday}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Open Time</div>
+		<div class="field">: {opentime_merit} {opentime}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Daily Basis</div>
+		<div class="field">: {daily_merit} {daily} </div>
+	</div>
+	<div style="display: {save_button}"><input type="submit" value="Save"></div>
+	<input type="hidden" name="empbasic" value="true">
+	</form>
+</div>

@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+$(function(){
+	$("#memo_date").datepicker();
+});
+</script>
+</head>
+
+<body>
+<form method="post" action="">
+<table>
+	<tr>
+        <td><label>Employee: </label></td>
+        <td><select name="empid">
+        	<option value="">Select Employee</option>
+        {employee}
+        	<option value="{empid}">{lastname}, {firstname}</option>
+        {/employee}
+        </select></td>
+    </tr>
+    <tr>
+        <td><label>Memo type: </label></td>
+        <td><select name="memo_type">
+        	<option value="">Select memo type</option>
+        {memo}
+        	<option value="{memoid}">{type}</option>
+        {/memo}
+        </select></td>
+    </tr>
+    <tr>
+    	<td><label>Memo Date:</label></td>
+        <td><input name="memo_date" type="text" id="memo_date" size="35" /></td>
+    </tr>
+    <tr>
+    	<td><label>Content:</label></td>
+    </tr>
+</table>
+<textarea name="memo_content" cols="50" rows="10"></textarea><br />
+<input type="submit" value="submit" />
+<input type="hidden" name="newmemo" value="true" />
+</form>
+{memo_table}
+{errors}
+</body>
+</html>

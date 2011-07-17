@@ -1,0 +1,49 @@
+<div style="padding: 6px;" class="event_calendar_header">
+    <a class="fr" id="event_calendar_next" href="javascript:;">Next</a>
+    <a class="fl" id="event_calendar_prev" href="javascript:;">Previous</a>
+    <div align="center" class="calendar_title">{month_title} {year}</div>
+    <div class="clr"></div>
+</div>
+<table cellspacing="0" width="100%" class="event_calendar">
+    <tr>
+    	<th>Sun</td>
+        <th>Mon</td>
+        <th>Tue</td>
+        <th>Wed</td>
+        <th>Thu</td>
+        <th>Fri</td>
+        <th>Sat</td>
+    </tr>
+	{row}
+    <tr>
+    	{col}
+    	<td valign="top" class="sevent_days {col_class} {has_event}" width="14%" ><div style="padding: 2px">
+    	    <a class="event_cal_day {is_today}" href="javascript:;" rel="{month}/{day}/{year}">{day}</a>
+    	</div></td>
+    	{/col}
+    </tr>
+    {/row}
+</table>
+<script>
+$(function(){
+    $('#event_calendar_prev').bind('click', function(){
+        $.get('portal/calendar/{prev_month}/{prev_year}', function(d){
+            $('#event_calendar').html(d);
+        });
+    });
+    
+    $('#event_calendar_next').bind('click', function(){
+        $.get('portal/calendar/{next_month}/{next_year}', function(d){
+            $('#event_calendar').html(d);
+        });
+    });
+    $(".event_cal_day").bind('click', function(){
+        var dte = $(this).attr('rel');
+        modalbox('portal/viewevent/'+dte, {title: "Event for "+dte, width: 500, buttons: {
+            "Close" : function(){
+                closeModalbox();
+            }
+        }});
+    });
+});
+</script>

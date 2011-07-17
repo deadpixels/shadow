@@ -1,0 +1,39 @@
+<script>
+    $.jgrid.no_legacy_api = true;
+	$.jgrid.useJSON = true;
+	var lastSelection;
+	var ot_lastSelection;
+	var ut_lastSelection;
+</script>
+<style>
+    .ui-datepicker{
+        font-size: 110%!important;
+    }
+</style>
+<div>
+    <div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+        <div class="fl">
+            <!-- a href="payroll/edit/{payrollid}"><img src="image/pay_calc.jpg"></a --> 
+	        <a href="payroll/addemp/{payrollid}"><img src="image/add_emp.png"></a>
+	        <!--a href="payroll/requests/{payrollid}/{empid}" onclick="this.blur(); Modalbox.show(this.href, {title: 'Over Time, Under Time and Leaves', width: 650, height:300}); return false;"><img src="image/leave.png"></a></div-->
+	    </div>
+	    <div align="right" style="line-height: 27px; height: 27px">
+	        <a href="payroll/edit/{payrollid}" title="Back to Payroll" align="absmiddle"><img src="image/exit.png" align="absmiddle"></a>&nbsp;
+	    </div>	    
+    </div>
+	<div style="border-bottom:1px solid #666;padding-bottom:0px;">	
+	<div style="font-weight:bold;font-size:14pt;padding-bottom:4px;text-align:center;padding-top:4px;">DAILY TIME RECORD</div>
+	<div class="fr" style="font-weight:bold;font-size:12pt;padding-bottom:4px">{datefrom} - {dateto}</div>
+	<div style="font-weight:bold;font-size:12pt;padding-bottom:4px">{name}</div>
+	
+	<div class="xjqgrid">{dtr}</div>
+	<div>&nbsp;</div>
+	<div>{loan_pay}</div>
+	<div>&nbsp;</div>
+	<div>
+	    <div class="fl" style="padding-right: 5px">{other_deds}</div>
+	    <div class="fl">{other_inco}</div>
+	    <div class="clr"></div>
+    </div>
+    <div>&nbsp;</div>
+</div>

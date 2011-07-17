@@ -1,0 +1,124 @@
+<div>	
+    <div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+        <div class="fr">
+	        <a href="employee/" title="Back to List"><img src="image/exit.png"></a>&nbsp;
+	    </div>
+        <div class="fl">
+           <div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">Edit Employee</div>
+	    </div>	    	    
+    </div>
+	<div>{errors}</div>
+	<form name="newemp" action="employee/editemp/{empid}" method="post" enctype="multipart/form-data">
+	<div class="fieldcontainer">
+		<div class="fl namefield">Id Number</div>
+		<div class="field">: <input type="text" name="idnumber" value="{idnumber}"></div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">First Name</div>
+		<div class="field">: <input type="text" name="firstname" value="{firstname}"></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Last Name</div>
+		<div class="field">: <input type="text" name="lastname" value="{lastname}"></div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Middle Name</div>
+		<div class="field">: <input type="text" name="middlename" value="{middlename}"></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Birth Date</div>
+		<div class="field">: <input type="text" AUTOCOMPLETE="off" name="birthdate" id="birthdate" value="{birthdate}"></div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Gender</div>
+		<div class="field">: {gender}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Civil Status</div>
+		<div class="field">: {civil_status}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Tax Code</div>
+		<div class="field">: {tax_code}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Email Address</div>
+		<div class="field"> 
+		    <div class="fr">{activation}</div>
+		    <div>: <input type="text" name="email" value="{email}"></div>		    
+		</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Bank Account</div>
+		<div class="field">: <input type="text" name="bankacct" value="{bankacct}"></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">SSS Number</div>
+		<div class="field">: <input type="text" name="sssnum" value="{sssnum}"></div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">PHIC Number</div>
+		<div class="field">: <input type="text" name="phicnum" value="{phicnum}"></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Deduct SSS</div>
+		<div class="field">: {sssded}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Deduct Philhealth</div>
+		<div class="field">: {philhealthded}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Deduct Pagibig</div>
+		<div class="field">: {pagibigded}</div>
+	</div>
+	<div class="fieldcontainer colorEven" style="font-weight: bold">DEDUCTION OVERRIDE</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">SSS Override</div>
+		<div class="field">: {sssovr}</div>
+	</div>
+	<div class="fieldcontainer colorEven">
+		<div class="fl namefield">Pagibig Override</div>
+		<div class="field">: {pagibigovr}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Philhealth Override</div>
+		<div class="field">: {philhealthovr}</div>
+	</div>
+	<div class="buttonpanel">
+	    <input type="submit" value="" class="updatebutton" align="absmiddle"/> <a href="employee/" title="Back to List" align="absmiddle"><img src="image/exit.png" align="top" /></a>
+    </div>
+	<input type="hidden" name="editemp" value="true">
+	</form>
+</div>
+
+<div>
+	<form name="newemp" action="employee/editemp/{empid}" method="post" enctype="multipart/form-data">
+	    <div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+            <div class="fr">&nbsp;</div>
+            <div class="fl">
+               <div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">Leave Privileges ({year})</div>
+	        </div>	    	    
+        </div>
+		
+		<div class="fieldcontainer">
+			<div class="fl namefieldm">VL- Vacation Leave</div>
+			<div class="fieldm">: <input type="text" name="vacationleave" value="{vacationleave}"></div>
+		</div>
+		<div class="fieldcontainer colorEven">
+			<div class="fl namefieldm">SL- Sick Leave</div>
+			<div class="fieldm">: <input type="text" name="sickleave" value="{sickleave}"></div>
+		</div>
+		<div class="fieldcontainer">
+			<div class="fl namefieldm">EL- Emergency Leave</div>
+			<div class="fieldm">: <input type="text" name="emergencyleave" value="{emergencyleave}"></div>
+		</div>
+		<div class="buttonpanel">
+	        <input type="submit" value="" class="updatebutton" align="absmiddle"/> <a href="employee/" title="Back to List" align="absmiddle"><img src="image/exit.png" align="top" /></a>
+        </div>
+		<input type="hidden" name="updateleave" value="true">
+	</form>
+</div>
+<div>&nbsp;</div>
+
+

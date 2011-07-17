@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+$(function(){
+	$("#when1").datepicker();
+	$("#when2").datepicker();
+	$("#when12").inputmask({"mask": "99:99", "autounmask" : true});
+	$("#when22").inputmask({"mask": "99:99", "autounmask" : true});
+});
+</script>
+</head>
+
+<body>
+<h2>Add Event</h2>
+<form method="post" action="" >
+<table>
+	<tr>
+     <td><label>What:</label></td>
+     <td><input type="text" name="what" size="80" /></td>
+    </tr>
+    <tr>
+     <td><label>Location:</label></td>
+     <td><input name="location" type="text" size="80" /></td>
+    </tr>
+    <tr>
+     <td><label>When:</label></td>
+     <td><input name="when1" type="text" id="when1" value="{month}/{day}/{year}" size="19" />-<input name="when12" id="when12" type="text" size="18" /> to <input name="when2" type="text" id="when2" size="19" />-<input name="when22" type="text" id="when22" size="18" /></td>
+    <tr>
+    <tr>
+     <td height="49"><label>Description:</label></td>
+     <td><textarea name="description" cols="80" rows="15"></textarea></td>
+    </tr>
+    <tr>
+     <td><input type="submit" name="submit" value="submit" /></td>
+    </tr>
+</table><input type="hidden" name="newevent" value="true" />
+</form>
+
+<h2>View Event</h2>
+{table}
+{errors}
+</body>
+</html>

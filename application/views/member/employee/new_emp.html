@@ -1,0 +1,79 @@
+<style>
+.newemp_holder input[type="text"], .newemp_holder select{
+	width: 200px;
+}
+</style>
+<div class="newemp_holder">
+    <div style="border-bottom:1px solid #ccc;padding: 8px 0px;height: 20px">
+        <div class="fr"><a href="employee/" title="Back to List"><img src="image/exit.png"></a></div>
+        <div style="font-size: 12pt;font-weight: bold">New Employee</div>
+    </div>
+	<div>{errors}</div>
+	<form name="newemp" action="employee/newemp" method="post" enctype="multipart/form-data">
+	<div class="fieldcontainer">
+		<div class="fl namefield">Id Number</div>
+		<div class="field">: <input type="text" name="idnumber"></div>
+	</div>
+	<div class="fieldcontainer ui-priority-secondary">
+		<div class="fl namefield">First Name</div>
+		<div class="field">: <input type="text" name="firstname"></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Last Name</div>
+		<div class="field">: <input type="text" name="lastname"></div>
+	</div>
+	<div class="fieldcontainer ui-priority-secondary">
+		<div class="fl namefield">Middle Name</div>
+		<div class="field">: <input type="text" name="middlename"></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Birth Date</div>
+		<div class="field">: <input type="text" style="background: url('image/date.png') no-repeat scroll 1px 2px; padding-left: 20px" AUTOCOMPLETE="off" name="birthdate" id="birthdate"></div>
+	</div>
+	<div class="fieldcontainer ui-priority-secondary">
+		<div class="fl namefield">Gender</div>
+		<div class="field">: <select name="gender">
+			<option value="">[----Select One----]</option>
+			<option value="1">Male</option>
+			<option value="2">Female</option>
+		</select></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Civil Status</div>
+		<div class="field">: {civil_status}</div>
+	</div>
+	<div class="fieldcontainer ui-priority-secondary">
+		<div class="fl namefield">Tax Code</div>
+		<div class="field">: {tax_code}</div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Email Address</div>
+		<div class="field">: <input type="text" name="email"></div>
+	</div>
+	<div class="fieldcontainer ui-priority-secondary">
+		<div class="fl namefield">Bank Account</div>
+		<div class="field">: <input type="text" name="bankacct"></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">SSS Number</div>
+		<div class="field">: <input type="text" name="sssnum"></div>
+	</div>
+	<div class="fieldcontainer ui-priority-secondary">
+		<div class="fl namefield">PHIC Number</div>
+		<div class="field">: <input type="text" name="phicnum"></div>
+	</div>
+	<div class="buttonpanel">
+	    <input type="submit" value="" class="submitbutton" align="absmiddle" /> <a href="employee/" title="Back to List" align="absmiddle"><img src="image/exit.png" align="top" /></a>
+	</div>
+	<input type="hidden" name="newemp" value="true">
+	</form>
+</div>
+<div>&nbsp;</div>
+<script>
+    $(function(){
+        $( "#birthdate" ).datepicker({
+			changeMonth: true,
+			changeYear: true
+		});
+    });
+</script>

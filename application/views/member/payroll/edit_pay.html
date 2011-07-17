@@ -1,0 +1,19 @@
+<script>
+    $.jgrid.no_legacy_api = true;
+	$.jgrid.useJSON = true;
+</script>
+<div>
+    <div style="padding: 8px 0;height: 27px; border-bottom: 1px solid #e1e1e1">
+        <div class="fr">
+	        <a href="payroll/" title="Back to List"><img src="image/exit.png"></a>&nbsp;
+	    </div>
+        <div class="fl">
+           <a href="payroll/addemp/{payrollid}"><img src="image/add_emp.png"></a> 
+	    <!--a href="payroll/requests/{payrollid}" onclick="this.blur(); Modalbox.show(this.href, {title: 'Over Time, Under Time and Leaves', width: 650, height:300}); return false;"><img src="image/leave.png"></a-->
+	    </div>	    	    
+    </div>	
+	<div class="fr">{release_control}</div>
+	<div style="padding-top:6px;padding-bottom:4px;font-weight:bold;font-family:Trebuchet MS;font-size:16pt">Payroll Period: {datefrom} - {dateto}</div>
+	<div>{payroll_calculator}</div>
+</div>
+<div>&nbsp;</div>

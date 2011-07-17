@@ -1,0 +1,7 @@
+ul.menu {
+    height: 41px!important;
+}
+
+ul.menu li a{
+    line-height: 31px;
+}

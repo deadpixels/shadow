@@ -1,0 +1,39 @@
+<div>
+	<div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">New Loan</div>
+	<div>{errors}</div>
+	<form name="newemp" action="employee/newloan/{empid}" method="post" enctype="multipart/form-data">
+	<div style="padding: 4px; line-height: 26px;">
+		<div class="fl namefield" style="font-weight: bold">Employee Name</div>
+		<div class="field" style="font-weight:bold">: <span style="font-size: 12pt">{name}</span></div>
+	</div>
+	<div style="padding: 4px; line-height: 26px" class="colorEven">
+		<div class="fl namefield">Loan Date</div>
+		<div class="field">: <input style="background: url('image/date.png') no-repeat scroll 1px 2px #FFFFFF; font-size:12pt; text-align:center;" type="text" AUTOCOMPLETE="off" name="loandate" id="loandate" /></div>
+	</div>
+	<div style="padding: 4px; line-height: 26px">
+		<div class="fl namefield">Loan Amount</div>
+		<div class="field">: <input type="text" name="amount" style="font-size:12pt;" ></div>
+	</div>
+	<div style="padding: 4px; line-height: 26px" class="colorEven">
+		<div class="fl namefield">Int Rate</div>
+		<div class="field">: <input type="text" name="intrate" style="font-size:12pt;" ></div>
+	</div>
+	<div style="padding: 4px; line-height: 26px">
+		<div class="fl namefield">Term</div>
+		<div class="field">: <input type="text" name="term" style="font-size:12pt;" ></div>
+	</div>
+	<div style="padding: 4px; line-height: 26px" class="colorEven">
+		<div class="fl namefield">Payment Mode</div>
+		<div class="field">: {paymode}</div>
+	</div>
+	<div style="padding: 4px; line-height: 26px" ><input type="submit" value="Save"></div>
+	<input type="hidden" name="newloan" value="true">
+	</form>
+</div>
+<div>&nbsp;</div>
+<script>
+    $(function(){
+        $( "#loandate" ).datepicker();
+        $("#loandate").datepicker( "option", "showAnim", "slideDown");
+    });
+</script>

@@ -1,0 +1,57 @@
+<div>
+	<div><h5>Edit Loan</h5></div>
+	<div>{errors}</div>
+	<form name="newemp" action="employee/editloan/{loanid}/{payrollid}" method="post" enctype="multipart/form-data">
+	<div>
+		<div class="fl namefield">Employee Name</div>
+		<div class="field">: {name}</div>
+	</div>
+	<div>
+		<div class="fl namefield">Loan Date</div>
+		<div class="field">: <input type="text" AUTOCOMPLETE="off" value="{loandate}" name="loandate" onclick="new CalendarDateSelect( this, {year_range:5} );"></div>
+	</div>
+	<div>
+		<div class="fl namefield">Loan Amount</div>
+		<div class="field">: <input type="text" name="amount" value="{amount}" ></div>
+	</div>
+	<div>
+		<div class="fl namefield">Int Rate</div>
+		<div class="field">: <input type="text" name="intrate" value="{intrate}" ></div>
+	</div>
+	<div>
+		<div class="fl namefield">Term</div>
+		<div class="field">: <input type="text" name="term" value="{term}"></div>
+	</div>
+	<div>
+		<div class="fl namefield">Payment Mode</div>
+		<div class="field">: {paymode}</div>
+	</div>
+	<div>
+		<div class="fl namefield">Active</div>
+		<div class="field">: <input type="checkbox" name="active" value="1" {active}></div>
+	</div>
+	<div><input type="submit" value="Save"></div>
+	<input type="hidden" name="editloan" value="true">
+	</form>
+	<div><h5>Loan Payments</h5></div>
+	<div>{payment_table}</div>
+	<form name="newemp" action="employee/editloan/{loanid}/{payrollid}" method="post" enctype="multipart/form-data">
+		<div>
+			<div class="fl namefield">Payment Date</div>
+			<div class="field">: <input type="text" value="{paydate}" AUTOCOMPLETE="off" name="paydate" id="paydate"></div>
+		</div>
+		<div>
+			<div class="fl namefield">Amount</div>
+			<div class="field">: <input type="text" name="amount" value="{payamount}"></div>
+		</div>
+		<div><input type="submit" value="Add Payment"></div>
+		<input type="hidden" name="payloan" value="true">
+	</form>
+</div>
+<div>&nbsp;</div>
+<script>
+    $(function(){
+        $( "#paydate" ).datepicker();
+        $("#paydate").datepicker( "option", "showAnim", "slideDown");
+    });
+</script>

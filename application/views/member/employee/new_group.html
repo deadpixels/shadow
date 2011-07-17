@@ -1,0 +1,17 @@
+<div>
+	<div style="padding-top:6px;padding-bottom:6px;font-size:12pt;font-weight:bold;font-family:Trebuchet MS">New Group</div>
+	{errors}
+	<form name="basic" action="employee/newgroup" method="post" enctype="multipart/form-data">
+	<div class="fieldcontainer">
+		<div class="fl namefield">Group Name</div>
+		<div class="field">: <input type="text" name="groupname" /></div>
+	</div>
+	<div class="fieldcontainer">
+		<div class="fl namefield">Group Head</div>
+		<div class="field">: {grouphead}</div>
+	</div>
+	<div><input type="submit" value="Save Group"></div>
+	<input type="hidden" name="newgroup" value="true">
+	</form>
+</div>
+<div>&nbsp;</div>

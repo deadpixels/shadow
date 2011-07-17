@@ -1,0 +1,45 @@
+<h3> Add Leave Form</h3>
+<div>
+{error}
+  <form method="POST" action="">
+    <div style="padding-bottom:6px">
+		<div class="fl namefield">Leave Type <span style="color: #ff0000">*<span></div>
+		<div class="field">: <select name="leavetypeid" id="select">
+            <option value="0">[--- SELECT LEAVE TYPE ---]</option>
+            {leave_type}
+            <option value="{value}" {selected}>{label}</option>
+            {/leave_type}
+        </select></div>
+	</div>
+    <div style="padding-bottom:6px">
+		<div class="fl namefield">Date <span style="color: #ff0000">*<span></div>
+		<div class="field">: <input type="text" name="startdate" id="startdate" readonly="true" value="{startdate}" /> to <input type="text" name="enddate" id="enddate" readonly="true" value="{enddate}" /></div>
+	</div>
+	<div style="padding-bottom:6px">
+		<div class="fl namefield">Reason/Description</div>
+		<div class="field">: <textarea name="description" cols="35" rows="5">{description}</textarea></div>
+	</div>
+	<div class="buttonpanel">
+	    <input type="submit" value="" class="submitbutton" align="absmiddle" /> <a href="uhrfnc/dashboard" title="Back to List" align="absmiddle"><img src="image/exit.png" align="top"></a>        
+    </div>
+    <input type="hidden" name="editleave" value="true" />
+  </form>
+</div>
+<script>
+$(function() {
+	var dates = $( "#startdate, #enddate" ).datepicker({
+		defaultDate: "+1w",
+		changeMonth: true,
+		numberOfMonths: 2,
+		onSelect: function( selectedDate ) {
+			var option = this.id == "startdate" ? "minDate" : "maxDate",
+				instance = $( this ).data( "datepicker" ),
+				date = $.datepicker.parseDate(
+					instance.settings.dateFormat ||
+					$.datepicker._defaults.dateFormat,
+					selectedDate, instance.settings );
+			dates.not( this ).datepicker( "option", option, date );
+		}
+	});
+});
+</script>

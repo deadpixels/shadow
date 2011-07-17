@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<script type="text/javascript">
+$(function(){
+	$("#date_in").datepicker();
+	$("#date_out").datepicker();
+	$("#time_in").inputmask({"mask": "99:99", "autounmask" : true});
+	$("#time_out").inputmask({"mask": "99:99", "autounmask" : true});
+});
+</script>
+</head>
+
+<body>
+{sched_table}
+
+<form method="post" action="" >
+	<label>Date In: </label><input type="text" name="date_in" id="date_in" />-<input type="text" name="time_in" id="time_in"/><br />
+    <label>Date Out: </label><input type="text" name="date_out" id="date_out" />-<input type="text" name="time_out" id="time_out"/><br />
+    <input type="hidden" name="plot" value="true" />
+    <input type="submit" value="submit" />
+</form>
+{errors}
+</body>
+</html>
