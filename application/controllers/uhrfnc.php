@@ -25,7 +25,9 @@ class uhrfnc extends CI_Controller {
 
     function ikawka(){}
 
-    function sample3(){}
+    function sample3(){
+        //this is my sample
+    }
 
 	function index(){
         redirect('uhrfnc/dashboard');
