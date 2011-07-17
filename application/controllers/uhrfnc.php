@@ -23,7 +23,9 @@ class uhrfnc extends CI_Controller {
         $this->table->set_template($tmpl); 
 	}
 
-    function ikawka(){}
+    function ikawka(){
+        //this is another one
+    }
 
     function sample3(){
         //this is my sample
