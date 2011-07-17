@@ -32,7 +32,7 @@ class uhrfnc extends CI_Controller {
     }
 
     function more(){
-        //this is me
+        //this is mybranch now
     }
 
 	function index(){
